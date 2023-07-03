@@ -9,5 +9,6 @@ import (
 func Start(PORT string){
 	http.Handle("/ip",http.HandlerFunc(controllers.WhoIP))
 	http.Handle("/signup",http.HandlerFunc(controllers.NewLogin))
+	http.Handle("/",http.HandlerFunc())
 	log.Fatal(http.ListenAndServe(PORT,nil))
 }
